@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+  frontend:
+    container_name: react_app
+    build:
+      context: .
+      dockerfile: Dockerfile1
+ 
+    ports:
+      - '3000:5173'
+  backend:
+    container_name: python_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+ 
+    ports:
+      - '8000:8000'
+   

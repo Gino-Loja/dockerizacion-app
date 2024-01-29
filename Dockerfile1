@@ -1,0 +1,6 @@
+# 
+FROM node:18-alpine
+WORKDIR /react-docker/
+COPY frontend/ /react-docker/
+RUN  npm install
+CMD ["npm", "run", "dev"]
